@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 df = pd.read_csv("datasets/test.csv")
-prompt = open('prompts/binary/zero-shot/zero-shot.txt','r').read()
+prompt = open('prompts/binary/one-shot/one-shot.txt','r').read()
 
 
 
@@ -12,7 +12,7 @@ def results(prompt, user_query) -> int:
     headers = {"Content-Type": "application/json"}
     data = {
         "model": "llama3.1:8b",
-        "prompt": f"{prompt}{user_query}",
+        "prompt": f"{prompt}{user_query}\nDistortion:",
         "stream": False, 
     }
 

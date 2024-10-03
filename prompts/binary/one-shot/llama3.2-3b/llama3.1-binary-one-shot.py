@@ -31,5 +31,5 @@ def results(prompt, user_query) -> int:
         return -1
 
 df["llama3.2response"] = df["Patient Question"].apply(lambda x: results(prompt, x))
-df.to_csv('prompts/binary/results/llama3.1-8b/one_shot.csv')
+df.to_csv('prompts/binary/results/llama3.2-3b/one_shot.csv')
 
