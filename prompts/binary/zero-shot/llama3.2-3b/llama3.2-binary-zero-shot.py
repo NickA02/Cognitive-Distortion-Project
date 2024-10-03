@@ -2,8 +2,8 @@ import requests
 import json
 import pandas as pd
 
-df = pd.read_csv("datasets/test.csv").sample(10)
-prompt = open('prompts/binary/zero-shot.txt','r').read()
+df = pd.read_csv("datasets/test.csv")
+prompt = open('prompts/binary/zero-shot/zero-shot.txt','r').read()
 
 
 
@@ -31,5 +31,5 @@ def results(prompt, user_query) -> int:
         return -1
 
 df["llama3.2response"] = df["Patient Question"].apply(lambda x: results(prompt, x))
-df.to_csv('prompts/binary/results/zero_shot_sample.csv')
+df.to_csv('prompts/binary/results/llama3.2-3b/zero_shot.csv')
 

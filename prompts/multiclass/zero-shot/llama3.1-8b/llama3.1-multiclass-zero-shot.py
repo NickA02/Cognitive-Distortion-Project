@@ -2,8 +2,8 @@ import requests
 import json
 import pandas as pd
 
-df = pd.read_csv("datasets/test.csv").sample(5)
-prompt = open('prompts/multiclass/zero-shot.txt','r').read()
+df = pd.read_csv("datasets/test.csv")
+prompt = open('prompts/multiclass/zero-shot/zero-shot.txt','r').read()
 
 
 
@@ -11,7 +11,7 @@ def results(prompt, user_query) -> int:
     url = "http://localhost:11434/api/generate"
     headers = {"Content-Type": "application/json"}
     data = {
-        "model": "llama3.2",
+        "model": "llama3.1:8b",
         "prompt": f"{prompt}{user_query}",
         "stream": False, 
     }
@@ -31,5 +31,5 @@ def results(prompt, user_query) -> int:
         return -1
 
 df["llama3.2response"] = df["Patient Question"].apply(lambda x: results(prompt, x))
-df.to_csv('prompts/multiclass/results/zero_shot_sample.csv')
+df.to_csv('prompts/multiclass/results/llama3.1-8b/zero_shot.csv')
 
