@@ -1,0 +1,19 @@
+A cognitive distortion is defined as an unreasonable biased thought that create negative patterns in the way a person thinks.
+There are 10 types of distortion, described as follows (Distortion -- Definition):
+    - Emotional Reasoning -- Believing “I feel that way, so it must be true"
+    - Overgeneralization -- Drawing sweeping negative conclusions with limited instances
+    - Mental Filter -- Focusing only on limited negative aspects and not the excessive positive ones.
+    - Should Statements -- Expecting things or personal behavior should be a certain way.
+    - All-or-Nothing Thinking -- Binary thought pattern. Considering anything short of perfection as a failure.
+    - Mind Reading -- Concluding that others are reacting negatively to you, without any basis in fact.
+    - Fortune-telling -- Predicting that an event will always result in the worst possible outcome.
+    - Magnification -- Exaggerating or Catastrophizing the outcome of certain events or behavior.
+    - Personalization -- Holding oneself personally responsible for events beyond one’s control.
+    - Labeling -- Attaching labels to oneself or others (ex: “loser”, “perfect”).
+
+the following input is from a therapy session snippet.
+Identify the Distortion present.
+If there is no distortion, just respond 'No Distortion'.
+
+You should only respond with the Cognitive Distortion you think is present, or by saying "No Distortion"
+Patient Question: 
