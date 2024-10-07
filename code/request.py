@@ -2,21 +2,21 @@ import requests
 import json
 import pandas as pd
 
-df = pd.read_csv("datasets/test.csv")
-prompt = open('prompts/binary/one-shot/one-shot.txt','r').read()
-
-
-
-def results(prompt, user_query) -> int:
+def results(prompt, user_query, model) -> int:
+    """Calls the Ollama API to generate a response to a user query
+    
+    Args:
+        prompt (str): The prompt to use
+        user_query (str): The user query to generate a response to
+        model (str): The model to use
+    """
     url = "http://localhost:11434/api/generate"
     headers = {"Content-Type": "application/json"}
     data = {
-        "model": "llama3.1:8b",
+        "model": model,
         "prompt": f"{prompt}{user_query}\nDistortion:",
         "stream": False, 
     }
-
-    #Read in prompt
 
     res = requests.post(
         url=url, headers=headers, data=json.dumps(data)
@@ -29,7 +29,3 @@ def results(prompt, user_query) -> int:
         return actual_response
     else:
         return -1
-
-df["llama3.2response"] = df["Patient Question"].apply(lambda x: results(prompt, x))
-df.to_csv('prompts/binary/results/llama3.2-3b/one_shot.csv')
-
