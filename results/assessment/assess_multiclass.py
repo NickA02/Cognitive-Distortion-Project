@@ -17,7 +17,7 @@ def main(eval_path):
     inference_df = pd.read_csv(eval_path)
 
     inference_df['Response'] = inference_df['Response'].apply(lambda x: x.lower())
-    inference_df['Response'] = inference_df['Response'].apply(lambda x: x.strip(".'"))
+    inference_df['Response'] = inference_df['Response'].apply(lambda x: x.strip(".'\n"))
 
     inference_df['Response'] = inference_df['Response'].apply(catch_responses)
     inference_df['gold'] = GOLD_DATA
@@ -48,6 +48,8 @@ def catch_responses(x):
             return 7
         case 'magnification': 
             return 8
+        case 'catastrophizing':
+            return 8
         case 'personalization': 
             return 9
         case 'labeling': 
@@ -62,7 +64,7 @@ def report_scores(inference_df, eval_path):
     print(f"Accuracy: {accuracy_score(inference_df['gold'], inference_df['Response'])}")
     f1_macro = f1_score(inference_df['gold'], inference_df['Response'], average=None)
     for i, f1 in enumerate(f1_macro):
-        print(f"F1-Score (Macro, Class {i}): {f1}")
+        print(f"F1-Score (Class {i}): {f1}")
     print(f"F1-Score (Macro): {f1_score(inference_df['gold'], inference_df['Response'], average='macro')}")
     print(f"F1-Score (Weighted): {f1_score(inference_df['gold'], inference_df['Response'], average='weighted')}")
 
@@ -76,4 +78,4 @@ if __name__ == '__main__':
     for eval_path in eval_paths:
         results = main(eval_path)
         results_table[eval_path] = results
-    results_table.to_csv('assessment/multiclass_results.csv', index=False)
+    results_table.to_csv('assessment/multiclass_results_test.csv', index=False)
