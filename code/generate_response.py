@@ -18,9 +18,9 @@ help = """
         3. Shot: The shot to use -- Currently only supports {0, 1}
     """
 
-if shot == 1:
+if int(shot) == 1:
     shot = "one-shot"
-elif shot == 0:
+elif int(shot) == 0:
     shot = "zero-shot"
 else:
     print(f"Currently only supports 0 or 1 shot, not {shot}")
@@ -39,4 +39,4 @@ prompt = open(f'prompts/{classification_type}/{shot}.txt','r').read()
 df[f"Response"] = df["Patient Question"].apply(lambda x: results(prompt, x, model_for_inference))
 
 df = df[["Patient Question", "Response"]].rename(columns={"Patient Question": "Prompt", "Response": "Response"})
-df.to_csv(f'results/{classification_type}/{model}/{shot}.csv')
+df.to_csv(f'results/{classification_type}/{model}/{shot}-2.csv')
