@@ -78,4 +78,4 @@ if __name__ == '__main__':
     for eval_path in eval_paths:
         results = main(eval_path)
         results_table[eval_path] = results
-    results_table.to_csv('assessment/multiclass_results_test.csv', index=False)
+    #results_table.to_csv('assessment/multiclass_results_test.csv', index=False)

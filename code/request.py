@@ -14,8 +14,13 @@ def results(prompt, user_query, model) -> int:
     headers = {"Content-Type": "application/json"}
     data = {
         "model": model,
-        "prompt": f"{prompt}{user_query}\nDistortion:",
+        "prompt": f"{prompt} {user_query}\nDistortion:",
         "stream": False, 
+        "options": {
+            "temperature": 0,
+            "num_ctx": 6144,
+        },
+
     }
 
     res = requests.post(

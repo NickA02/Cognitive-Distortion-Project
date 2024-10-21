@@ -1,4 +1,5 @@
-ONE-SHOT Prompt for multi class
+Task:
+From the following therapy session snippet, identify the cognitive distortion. If none are present, respond with 'No Distortion.' Provide the distortion type only, with no explanation.
 
 A cognitive distortion is defined as an unreasonable biased thought that create negative patterns in the way a person thinks.
 There are 10 types of distortion, described as follows (Distortion -- Definition):
@@ -12,9 +13,6 @@ There are 10 types of distortion, described as follows (Distortion -- Definition
     - Magnification -- Exaggerating or Catastrophizing the outcome of certain events or behavior. 
     - Personalization -- Holding oneself personally responsible for events beyond one’s control.
     - Labeling -- Attaching labels to oneself or others (ex: “loser”, “perfect”).
-
-Task:
-From the following therapy session snippet, identify the cognitive distortion. If none are present, respond with 'No Distortion.' Provide the distortion type only, with no explanation.
 
 Examples:
 Snippet:
@@ -61,6 +59,22 @@ Snippet:
 Patient Question: From the U.S.: I am a 22 year old recent graduate and my fiance is 30 years old and a hard worker as a business analyst. We started dating when I was 18 (he was 26). We dated through my years at school, he broke up with me shortly twice in our earlier time together (my family was not very accepting of me dating and he saw that). Later when I moved to Dallas for the last two years of nursing school, we decided to move in together.
 Distortion: No Distortion
 
----------------BEGIN-INFERENCE--------------------
+Reminder:
+Task:
+Your task is to identify the cognitive distortion from the following therapy session snippet. If none are present, respond with 'No Distortion.' Provide the distortion type only, with no explanation.
+
+cognitive distortions are defined as an unreasonable biased thought that create negative patterns in the way a person thinks.
+There are 10 types of distortion, described as follows (Distortion -- Definition):
+    - Emotional Reasoning -- Believing “I feel that way, so it must be true".
+    - Overgeneralization -- Drawing sweeping negative conclusions with limited instances.
+    - Mental Filter -- Focusing only on limited negative aspects and not the excessive positive ones.
+    - Should Statements -- Expecting things or personal behavior should be a certain way.
+    - All-or-Nothing Thinking -- Binary thought pattern. Considering anything short of perfection as a failure.
+    - Mind Reading -- Concluding that others are reacting negatively to you, without any basis in fact.
+    - Fortune-telling -- Predicting that an event will always result in the worst possible outcome.
+    - Magnification -- Exaggerating or Catastrophizing the outcome of certain events or behavior. 
+    - Personalization -- Holding oneself personally responsible for events beyond one’s control.
+    - Labeling -- Attaching labels to oneself or others (ex: “loser”, “perfect”).
+
 Snippet:
 Patient Question:
