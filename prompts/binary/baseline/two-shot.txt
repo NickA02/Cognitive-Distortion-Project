@@ -1,0 +1,24 @@
+Instruction:
+A cognitive distortion is defined as an unreasonable biased thought that create negative patterns in the way a person thinks.
+
+Task:
+Given the therapy session snippet, determine if a cognitive distortion is present. Respond with 'Yes' or 'No' only.
+
+Examples:
+Patient Question: "I think I’m depressed and I don’t know how to tell my parents. Please help me. I think I’m severely depressed because I’ve been so disconnected lately. I’ve been growing more and more anti-social, I’m suddenly losing sleep and becoming more irriatable even if I try hard to be nice. I’m also having at least 10 suicidal thoughts per day. Can you tell me how the heck I’m supposed to tell my parents when I can’t stop thinking that they’ll only make fun of me and not believe me? Please?"
+Distortion: Yes
+
+Patient Question: "I’ve self harmed on and off for almost three years. Most of the time it’s out of sheer apathy, other times it’s out of complete anger towards myself or the others around me. Sometimes when I’m angry I imagine myself doing horrible graphic things to myself and it’s oddly calming when I do." 
+Distortion: No
+
+Patient Question: "Almost constantly; while I’m driving I think about getting into a crash, while I’m sitting at home I think about being robbed or killing myself. Anything, really. I want these things to happen and sometimes I gain the motivation to do something about it myself but I never really have the means or the motivation (for lack of a better word) wears off. To me, it doesn’t matter whether the fantasy ends with my dying or not, and whether it is preferred or not really varies. Recently I had a friend kill himself, and obviously it got to me; but this all started way before he hung himself. While I am devastated about his loss, I also feel an odd sense of guilt and envy because he actually did what I’ve always wanted to/thought about doing." 
+Distortion: Yes
+
+Patient Question: "I have a close friend who is also a colleague; we spend a lot of time together. She shares a lot of her feelings with me, and a while ago I found that her low moods were causing my mood to drop as well. I made an effort and have had success separating my mood from hers and protecting myself from “catching” how she feels." 
+Distortion: No
+
+Task:
+Given the therapy session snippet, determine if a cognitive distortion is present. Respond with 'Yes' or 'No' only. 
+
+Snippet:
+Patient Question:

@@ -4,13 +4,16 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score
 
 #Make this your results directory
-os.chdir('/Users/nicholasalmy/Desktop/Cognitive-Distortion-Project/results/')
+os.chdir('results')
 eval_paths = [
-    'binary/llama3.2-3b/one_shot.csv',
-    'binary/llama3.2-3b/zero_shot.csv',
-    'binary/llama3.1-8b/one_shot.csv',
-    'binary/llama3.1-8b/zero_shot.csv',
+    'binary/baseline/llama3.2-3b/two-shot.csv',
+    'binary/baseline/llama3.2-3b/one_shot.csv',
+    'binary/baseline/llama3.2-3b/zero_shot.csv',
+    'binary/baseline/llama3.1-8b/two-shot.csv',
+    'binary/baseline/llama3.1-8b/one_shot.csv',
+    'binary/baseline/llama3.1-8b/zero_shot.csv'
 ]
+
 GOLD_DATA = pd.read_csv('../datasets/test.csv')['binary_ground_truth']
 
 def main(eval_path):

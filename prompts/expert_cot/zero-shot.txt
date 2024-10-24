@@ -12,8 +12,9 @@ You know of ten cognitive distortions:
 - Personalization -- Holding oneself personally responsible for events beyond one’s control.
 - Labeling -- Attaching labels to oneself or others (ex: “loser”, “perfect”).
 
-From the following therapy session snippet, identify if a cognitive distortion is present. 
-Answer either 'Yes' or 'No' and nothing else.
+I have a list of anecdotes that needs expert labeling. Please read in the anecdote and respond in the form:
 
-Patient Question:
+Distortion Present: (Y/N)
+Explanation: (Your expert insight)
 
+Anecdote:
