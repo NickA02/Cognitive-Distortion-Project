@@ -14,7 +14,7 @@ You know of ten cognitive distortions:
 
 I have a list of anecdotes that needs expert labeling. Please read in the anecdote and respond in the form:
 
-Distortion Present: (Y/N)
 Explanation: (Your expert insight)
+Distortion Present: (Y/N)
 
 Anecdote:
