@@ -14,8 +14,7 @@ There are 10 types of distortion, described as follows (Distortion -- Definition
 
 I have a list of anecdotes that needs expert labeling. Please read in the anecdote and respond in the form:
 
+Explanation: (Your thought process into if there might be a distortion)
 Distortion Present: (Y/N)
-Explanation: (Your expert insight)
-Cognitive Distortion: (ONLY IF DISTORTION PRESENT! One of the 10 Distortions defined -- No Explanation)
 
 Anecdote:
