@@ -6,12 +6,9 @@ from sklearn.metrics import accuracy_score, f1_score
 #Make this your results directory
 os.chdir('results')
 eval_paths = [
-    'binary/baseline/llama3.2-3b/two-shot.csv',
-    'binary/baseline/llama3.2-3b/one_shot.csv',
-    'binary/baseline/llama3.2-3b/zero_shot.csv',
-    'binary/baseline/llama3.1-8b/two-shot.csv',
-    'binary/baseline/llama3.1-8b/one_shot.csv',
-    'binary/baseline/llama3.1-8b/zero_shot.csv'
+    'binary/expert_cot/llama3.2-3b/zero-shot.csv',
+    'binary/expert_cot/llama3.1-8b/zero-shot.csv'
+
 ]
 
 GOLD_DATA = pd.read_csv('../datasets/test.csv')['binary_ground_truth']

@@ -1,8 +1,16 @@
 Instruction:
 A cognitive distortion is an unreasonable, biased thought that leads to negative thinking patterns.
 
+Task:
+Given the therapy session snippet, determine if a cognitive distortion is present. Respond with 'Yes' or 'No' only.
+
 Example:
-“I failed one exam, so I’ll fail the whole course.” (Overgeneralization: making broad conclusions based on a single event).
+Patient Question: “I failed one exam, so I’ll fail the whole course.” (Overgeneralization: making broad conclusions based on a single event).
+Distortion: Yes
+
+Example:
+Patient Question: "I have a close friend who is also a colleague; we spend a lot of time together. She shares a lot of her feelings with me, and a while ago I found that her low moods were causing my mood to drop as well. I made an effort and have had success separating my mood from hers and protecting myself from “catching” how she feels." 
+Distortion: No
 
 Task:
 Given the following therapy session snippet, determine if a cognitive distortion is present. Respond with 'Yes' or 'No' only.
