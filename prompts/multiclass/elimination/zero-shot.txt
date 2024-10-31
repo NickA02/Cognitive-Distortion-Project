@@ -11,9 +11,5 @@ There are 10 types of distortion, described as follows (Distortion -- Definition
     - Personalization -- Holding oneself personally responsible for events beyond one’s control.
     - Labeling -- Attaching labels to oneself or others (ex: “loser”, “perfect”).
 
-the following input is from a therapy session snippet.
-Identify the Distortion present.
-If there is no distortion, just respond 'No Distortion'.
-
-You should only respond with the Cognitive Distortion you think is present, or by saying "No Distortion". There should be no explanation.
+Try to eliminate the distortion that is least likely. 
 Patient Question: 

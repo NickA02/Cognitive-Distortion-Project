@@ -29,20 +29,37 @@ def multiturn_conversation(prompt, initial_query, model, max_turns=5):
     conversation_history = ["User: " + initial_query]
     for _ in range(max_turns):
         response = results(prompt, conversation_history, model)
-        conversation_history.append("LLM: " + response)
-        conversation_history.append("User: " + response)  # Simulating a follow-up user input, can adjust as needed
+        conversation_history.append("Assistant: " + response)
+        conversation_history.append("User: " + response)  
     return "\n".join(conversation_history)
 
 def main():
     model = argv[1]
     experience = argv[2]
     classification_type = argv[3]
-    shot = float(argv[4])
-    
+    shot = argv[4]
+    if shot == 1:
+        shot = "one-shot"
+    elif shot == 0:
+        shot = "zero-shot"
+    elif shot == 1.1:
+        shot = "one-shot-traditional"
+    elif shot == 1.2:
+        shot = "one-shot-experimental"
+    elif shot == 2:
+        shot = "two-shot"
+    elif shot == 3:
+        shot = "three-shot"
+    else:
+        print(f"Currently does not support shot {shot} for {experience} {classification_type} classification")
+        exit()
+        
+        
     try:
         dataset = argv[5]
     except:
         dataset = "datasets/test.csv"   
+
 
     if "-" in model:
         model = model.replace("-", ":")
