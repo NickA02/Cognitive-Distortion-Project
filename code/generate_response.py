@@ -5,7 +5,7 @@ import pandas as pd
 from sys import argv
 
 model = argv[1]
-experience = argv[2]
+persona = argv[2]
 classification_type = argv[3]
 
 try:
@@ -26,9 +26,9 @@ help = """
 
     Run the script with the following arguments:
         1. Model: The model to use -- Currently only supports {llama3.2-3b, llama3.1-8b}
-        2. Experience: The persona of the model -- Currently only supports {expert, baseline}
-        2. Classification Type: The classification type to use -- Supports {binary, multiclass, heirarchical}
-        3. Shot: The shot to use -- Currently only supports {0, 1}
+        2. persona: The persona of the model -- Currently only supports {expert, baseline, expert-explanation, explanation}
+        2. Classification Type: The classification type to use -- Supports {binary, multiclass, heirarchy}
+        3. Shot: The shot to use -- Currently only supports {0, 1 (limited)}
         4. Dataset: The dataset to use 
     """
 
@@ -46,7 +46,7 @@ elif shot == 2:
 elif shot == 3:
     shot = "three-shot"
 else:
-    print(f"Currently does not support shot {shot} for {experience} {classification_type} classification")
+    print(f"Currently does not support shot {shot} for {persona} {classification_type} classification")
     exit()
 
 #if model has a '-' in it, replace it with a ':'
@@ -62,9 +62,9 @@ except:
     print("Dataset not found... using test.csv instead")
     df = pd.read_csv("datasets/test.csv")
 
-prompt = open(f'prompts/{classification_type}/{shot}.txt','r').read()
+prompt = open(f'prompts/{classification_type}/{persona}/{shot}.txt','r').read()
 
 df[f"Response"] = df["Patient Question"].apply(lambda x: results(prompt, x, model_for_inference))
 
 df = df[["Patient Question", "Response"]].rename(columns={"Patient Question": "Prompt", "Response": "Response"})
-df.to_csv(f'results/{classification_type}/{model}/{shot}.csv')
+df.to_csv(f'results/{classification_type}/{persona}/{model}/{shot}.csv')
