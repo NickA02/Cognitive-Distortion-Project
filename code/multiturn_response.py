@@ -26,14 +26,17 @@ def results(prompt, conversation_history, model):
     else:
         return "API Error"
 
-def multiturn_conversation(prompt, initial_query, model, max_turns=10):
+def multiturn_conversation(prompt, initial_query, model, max_turns=8):
     """Handles multiturn conversation by iterating through turns and updating the conversation history."""
     conversation_history = ["User: " + initial_query]
     
-    for _ in range(max_turns):
+    for i in range(max_turns):
         response = results(prompt, conversation_history, model)
         conversation_history.append("Assistant: " + response)
-        conversation_history.append("User: " + response)
+        if (i <= 7):
+            conversation_history.append("User: Choose one more distortion to eliminate and list the remaining distortions")
+        else:
+            conversation_history.append("User: State which distortion remains. If you think don't think this distortion is present, then only say 'No distortion' instead.")
     return "\n".join(conversation_history)
 
 def main():
