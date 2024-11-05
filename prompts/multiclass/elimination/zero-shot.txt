@@ -13,17 +13,11 @@ Here are the cognitive distortions:
 - Labeling -- Attaching labels to oneself or others (ex: "loser", "perfect")
 
 For your first response:
-1. If NO distortions are found:
-   - say “No distortion”
+1. Eliminate distortions that are not present 
 
-3. If distortions ARE found:
-   - List all potentially relevant distortions
-   - Choose one distortion to eliminate 
-   - List the remaining distortions
-
-For each subsequent response (only if distortions were found):
-1. Choose one more distortion to eliminate 
-2. List the remaining distortions
+2. For each subsequent response (only if distortions were found):
+   1. Choose one more distortion to eliminate 
+   2. List the remaining distortions
 
 When only two distortions remain, state which two distortions remain
 
