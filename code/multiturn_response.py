@@ -2,7 +2,14 @@ import pandas as pd
 from sys import argv
 import requests
 import json
+import os 
+import sys
+import random
+import time
 
+#start timer
+start = time.time()
+j = 0
 def results(prompt, conversation_history, model):
     """Calls the local API to generate a response based on the conversation history."""
     url = f"http://localhost:11434/api/generate"
@@ -15,8 +22,8 @@ def results(prompt, conversation_history, model):
         "prompt": full_prompt,
         "stream": False,
         "options": {
-            "temperature": 0,
-            "num_ctx": 6144,  
+            "temperature": 0.3,
+            "num_ctx": 8192,
         }
     }
 
@@ -28,15 +35,22 @@ def results(prompt, conversation_history, model):
 
 def multiturn_conversation(prompt, initial_query, model, max_turns=8):
     """Handles multiturn conversation by iterating through turns and updating the conversation history."""
-    conversation_history = ["User: " + initial_query]
+    conversation_history = [initial_query + "[/INST]"]
     
     for i in range(max_turns):
         response = results(prompt, conversation_history, model)
-        conversation_history.append("Assistant: " + response)
+        conversation_history.append(response)
         if (i <= 7):
-            conversation_history.append("User: Choose one more distortion to eliminate and list the remaining distortions")
+            sys.stdout.write("\033[K")
+            sys.stdout.write(f"\rTurn {i+1}: {response}")
+            conversation_history.append("</s><s>[INST] Choose one more distortion to eliminate and list the remaining distortions. If you are unclear due to your previous steps, respond with \"NA\" [/INST]")
+            #Clear the stdout
+            
         else:
-            conversation_history.append("User: State which distortion remains. If you think don't think this distortion is present, then only say 'No distortion' instead.")
+            conversation_history.append("</s><s>[INST] State which distortion remains. If you think don't think this distortion is present, then only say 'No distortion' instead. If you are unclear due to your previous steps, respond with \"NA\" [/INST]")
+    global j
+    j = j + 1
+    sys.stdout.write(f"\r{j}")
     return "\n".join(conversation_history)
 
 def main():
@@ -69,17 +83,22 @@ def main():
     if "-" in model:
         model = model.replace("-", ":")
     
-    prompt_path = f'prompts/{classification_type}/{shot}.txt'
+    prompt_path = f'prompts/{classification_type}/{experience}/{shot}.txt'
     prompt = open(prompt_path, 'r').read()
     
     df = pd.read_csv(dataset)
-    df = df.head(1)  
+    #Polars Only evaluate at index 32
+    df = df.iloc[[32]]
+
     df['Full Conversation'] = df['Patient Question'].apply(
         lambda query: multiturn_conversation(prompt, query, model)
     )
     
-    output_file = f'results/{classification_type}/{model.replace(":", "-")}/{shot}.csv'
+    output_file = f'results/{classification_type}/{experience}/{model.replace(":", "-")}/{shot}.csv'
     df[['Patient Question', 'Full Conversation']].to_csv(output_file, index=False)
+    #end timer
+    end = time.time()
+    print(f"\nTime taken: {end - start}")
 
 if __name__ == "__main__":
     main()

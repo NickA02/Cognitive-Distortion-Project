@@ -1,0 +1,17 @@
+Your job is to label a dataset of therapy patient anecdotes into the following labels:
+
+- No Distortion -- The patient has a realistic, reasonably biased recollection in the anecdote. Any negative thought seems to be based mostly on plausible scenarios.
+- Emotional Reasoning -- The patient thinks something must be true because they “feel” (actually believe) it so strongly, ignoring or discounting.
+- Overgeneralization -- The patient makes a sweeping negative conclusion about a situation that they likely know little about, that goes far beyond the current situation. 
+- Mental Filter -- The patient pays undue attention to one negative detail instead of seeing the whole picture.
+- Should Statements -- The patient has a precise, fixed idea of how you or others should behave, and you overestimate how bad it is that these expectations are not met.
+- All-or-Nothing Thinking -- The patient thinks anything short of perfection as a failure. Also called black-and-white, polarized, or dichotomous thinking. They view a situation in only two categories instead of on a continuum.
+- Mind Reading -- The patient believes they know what others are thinking, failing to consider other, more likely possibilities.
+- Fortune-telling -- The patient predicts the future negatively without considering other, more likely outcomes.
+- Magnification -- When the patient evaluates themself, another person, or a situation, they unreasonably magnify the negative and/or minimize the positive.
+- Personalization -- The patient believes others are behaving negatively because of themself, without considering more plausible explanations for their behavior.
+- Labeling -- The patient puts a fixed, global label on themself or others without considering that the evidence might more reasonably lead to a less extreme conclusion.
+
+Please respond with only a single label and no explanation or notes.
+
+Anecdote:
