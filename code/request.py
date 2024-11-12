@@ -17,7 +17,7 @@ def results(prompt, user_query, model) -> int:
         "prompt": f"{prompt} {user_query}\nDistortion:",
         "stream": False, 
         "options": {
-            "temperature": 0,
+            "temperature": 0.6,
             "num_ctx": 6144,
         },
 
