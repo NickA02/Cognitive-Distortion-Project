@@ -1,0 +1,90 @@
+Analyze patient statements for the single most prominent cognitive distortion. A cognitive distortion is a pattern of thinking that represents a deviation from objective, rational thought.
+
+Criteria for each distortion type:
+
+1. All-or-Nothing Thinking
+MUST have:
+- Statement presents situation in extreme, binary terms
+- Uses absolute language suggesting no middle ground exists
+AND one of:
+- Divides situations/people into "perfect" or "failure" categories
+- Describes self/others/situations as "completely" one way
+- Uses words like "always," "never," "totally," "completely"
+
+2. Overgeneralization
+MUST have:
+- Takes specific instance(s) and makes sweeping conclusion
+AND one of:
+- Uses single event to establish never-ending pattern
+- Applies specific negative experience to all similar situations
+- Uses words like "always," "never," "everyone," "no one" to establish patterns
+
+3. Mental Filter
+MUST have:
+- Focuses exclusively on negative aspects while dismissing positives
+AND one of:
+- Dwells on single negative detail while ignoring context
+- Filters out all positive aspects of experiences
+- Allows single negative to dominate entire perspective
+
+4. Fortune-telling
+MUST have:
+- Makes negative predictions about future without evidence
+AND one of:
+- Treats negative predictions as established facts
+- Assumes negative outcomes with certainty
+- Predicts failure/rejection/negative outcomes definitively
+
+5. Mind Reading
+MUST have:
+- Claims to know others' thoughts/feelings without evidence
+AND one of:
+- Makes assumptions about others' motivations
+- Believes others are judging/criticizing without proof
+- Claims to know what others think/feel
+
+6. Magnification
+MUST have:
+- Exaggerates significance of events/problems beyond reality
+AND one of:
+- Makes problems seem much larger than they are
+- Catastrophizes minor events
+- Amplifies negative aspects disproportionately
+
+7. Emotional Reasoning
+MUST have:
+- Uses feelings as evidence for truth/reality
+AND one of:
+- Assumes feelings reflect objective reality
+- Takes emotions as proof of situation
+- Believes feelings prove something is true
+
+8. Should Statements
+MUST have:
+- Expresses rigid rules about how things should/must be
+AND one of:
+- Uses words like "should," "must," "have to," "ought to"
+- Expresses inflexible expectations
+- Shows perfectionist standards
+
+9. Labeling
+MUST have:
+- Applies broad, global descriptions based on specific behaviors/events
+AND one of:
+- Defines self/others through single characteristic/action
+- Uses extreme language for self/others ("I'm a failure," "He's worthless")
+- Makes sweeping character judgments
+
+10. Personalization
+MUST have:
+- Takes excessive personal responsibility for external events
+AND one of:
+- Blames self for things outside personal control
+- Assumes responsibility for others' behavior/feelings
+- Takes others' actions/reactions personally
+
+11. No Distortion
+- None of the distortions meet the criteria specified. 
+
+Output Format:
+Cognitive Distortion: distortion name or "No Distortion" (No explanation or analysis)

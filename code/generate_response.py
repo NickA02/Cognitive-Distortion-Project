@@ -58,15 +58,13 @@ elif ":" in model:
 
 try:
     df = pd.read_csv(f"datasets/{dataset}.csv")
-    df = df.head(4)
 except:
     print("Dataset not found... using test.csv instead")
-    df = pd.read_csv("datasets/expert_merged_no_distortion.csv")
-    df = df.head(15)
+    df = pd.read_csv("datasets/test.csv")
 
 prompt = open(f'prompts/{classification_type}/{persona}/{shot}.txt','r').read()
 
-df[f"Response_testing"] = df["Patient Question"].apply(lambda x: results(prompt, x, model_for_inference))
+df[f"Response"] = df["Patient Question"].apply(lambda x: results(prompt, x, model_for_inference))
 
-df = df[["Patient Question", "Response", "Response_testing"]].rename(columns={"Patient Question": "Prompt", "Response": "Response", "Response_testing":"Response_testing"})
+df = df[["Patient Question", "Response"]].rename(columns={"Patient Question": "Prompt", "Response": "Response", "Response_testing":"Response_testing"})
 df.to_csv(f'results/{classification_type}/{persona}/{model}/{shot}.csv')

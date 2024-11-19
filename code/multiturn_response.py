@@ -43,11 +43,11 @@ def multiturn_conversation(prompt, initial_query, model, max_turns=8):
         if (i <= 7):
             sys.stdout.write("\033[K")
             sys.stdout.write(f"\rTurn {i+1}: {response}")
-            conversation_history.append("</s><s>[INST] Choose one more distortion to eliminate and list the remaining distortions. If you are unclear due to your previous steps, respond with \"NA\" [/INST]")
+            conversation_history.append("Choose one more distortion to eliminate and list the remaining distortions. If you are unclear due to your previous steps, respond with \"NA\"")
             #Clear the stdout
             
         else:
-            conversation_history.append("</s><s>[INST] State which distortion remains. If you think don't think this distortion is present, then only say 'No distortion' instead. If you are unclear due to your previous steps, respond with \"NA\" [/INST]")
+            conversation_history.append("State which distortion remains. If you think don't think this distortion is present, then only say 'No distortion' instead. If you are unclear due to your previous steps, respond with \"NA\"")
     global j
     j = j + 1
     sys.stdout.write(f"\r{j}")
