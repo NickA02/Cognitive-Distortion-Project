@@ -12,11 +12,8 @@ Here are the cognitive distortions:
 - Personalization -- Holding oneself personally responsible for events beyond one's control
 - Labeling -- Attaching labels to oneself or others (ex: "loser", "perfect")
 
-For your first response:
-1. Eliminate distortions that are not present 
-
-2. For each subsequent response (only if distortions were found):
-   1. Choose one more distortion to eliminate 
+For each response (only if distortions were found):
+   1. Choose one or more distortions that are not present to eliminate
    2. List the remaining distortions
 
 When only two distortions remain, state which two distortions remain
