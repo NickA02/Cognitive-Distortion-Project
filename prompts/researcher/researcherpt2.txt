@@ -1,4 +1,4 @@
-“<START DEFINITION>
+“<DEFINITION>
 - No Distortion -- (Your updated definition of Emotional Reasoning)
 - Emotional Reasoning -- (Your updated definition of Emotional Reasoning)
 - Overgeneralization -- (Your updated definition of Overgeneralization)
@@ -10,6 +10,6 @@
 - Magnification -- (Your updated definition of Magnification) 
 - Personalization -- (Your updated definition of Personalization)
 - Labeling -- (Your updated definition of Labeling)
-<END DEFINITION>”
+</DEFINITION>”
 
 Anecdote: 

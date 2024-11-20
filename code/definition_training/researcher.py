@@ -49,7 +49,8 @@ def send_message(messages, chat):
     response = ollama.chat(
         model="gemma2:27b",
         messages=messages,
-        stream=False
+        stream=False,
+        options={"temperature": 0},
     )['message']['content']
 
     messages.append({
@@ -59,52 +60,74 @@ def send_message(messages, chat):
     #print(f"\n\nAssistant: {response}\n\n")
     return messages
 
+def send_message_single_turn(chat):
+    messages = []
+    messages.append({
+        'role': 'system',
+        'content': chat
+        })
+    
+    response = ollama.chat(
+        model="gemma2:27b",
+        messages=messages,
+        stream=False,
+        options={"temperature": 0},
+    )['message']['content']
+
+    return response
+
 
 def replace_definition(old_text, new_text):
     # Extract the new definition content between the tags
-    new_definition_match = re.search(r'<START DEFINITION>(.*?)<END DEFINITION>', new_text, re.DOTALL)
+    new_definition_match = re.search(r'<DEFINITION>(.*?)</DEFINITION>', new_text, re.DOTALL)
     if new_definition_match:
         new_definition = new_definition_match.group(1)
     else:
         raise ValueError("New text does not contain a valid definition.")
 
     # Replace the old definition content with the new one
-    updated_text = re.sub(r'<START DEFINITION>(.*?)<END DEFINITION>', f'<START DEFINITION>{new_definition}<END DEFINITION>', old_text, flags=re.DOTALL)
+    updated_text = re.sub(r'<DEFINITION>(.*?)</DEFINITION>', f'<DEFINITION>{new_definition}</DEFINITION>', old_text, count=1, flags=re.DOTALL)
 
     return updated_text
 
+def extract_definition(text):
+    definition_match = re.search(r'<DEFINITION>(.*?)</DEFINITION>', text, re.DOTALL)
+    if definition_match:
+        definition = definition_match.group(1)
+        return f"<DEFINITION>{definition}</DEFINITION>"
+    else:
+        raise ValueError("Text does not contain a valid definition.")
 
-sample = "Hola Hola <START DEFINITION> This is the old definition. <END DEFINITION>"
-new_text = "Hello Hello <START DEFINITION> This is the new definition. <END DEFINITION>"
+def main():
+    chat_histories = []
+    global prompt
+    global prompt_pt2
 
-#print(replace_definition(sample, new_text))
+    sample_instances = pd.read_csv('datasets/train.csv')
+    j = 0
+    for sample_question in sample_instances.iterrows():
+        sample_question = sample_question[1]
+        sample_anecdote = sample_question['Patient Question']
+        sample_distortion = sample_question['Dominant Distortion']
+        sample_secondary_distortion = sample_question['Secondary Distortion (Optional)']
+        sample_reason = sample_question['Distorted part']
+        response = request(prompt, sample_anecdote, sample_distortion, sample_secondary_distortion, sample_reason)
+        chat_histories.append(response)
+        try:
+            prompt = replace_definition(prompt, response[-1]['content'])
+        except:
+            print("\nFailed to redefine prompt")
+            print(f"Prompt: {prompt}")
+            print(f"Response: {response}")
+        j = j + 1
+        if j % 100 == 0:
+            print(f"\niteration {j} definitions: {prompt}")
+        sys.stdout.write(f"\r{j / len(sample_instances) * 100}% done")
+        
 
-chat_histories = []
+    # Save the chat histories to a file
+    with open('researcher_chat_histories.json', 'w') as f:
+        json.dump(chat_histories, f, indent=4)
 
-sample_instances = pd.read_csv('datasets/train.csv')
-j = 0
-for sample_question in sample_instances.iterrows():
-    sample_question = sample_question[1]
-    sample_anecdote = sample_question['Patient Question']
-    sample_distortion = sample_question['Dominant Distortion']
-    sample_secondary_distortion = sample_question['Secondary Distortion (Optional)']
-    sample_reason = sample_question['Distorted part']
-    response = request(prompt + prompt_pt2, sample_anecdote, sample_distortion, sample_secondary_distortion, sample_reason)
-    chat_histories.append(response)
-    try:
-        prompt = replace_definition(prompt, response[-1]['content'])
-    except:
-        print("\nFailed to redefine prompt")
-        print(f"Prompt: {prompt}")
-        print(f"Response: {response}")
-    j = j + 1
-    if j % 100 == 0:
-        print(f"\niteration {j} definitions: {prompt}")
-    sys.stdout.write(f"\r{j / len(sample_instances) * 100}% done")
-    
-
-# Save the chat histories to a file
-with open('researcher_chat_histories.json', 'w') as f:
-    json.dump(chat_histories, f, indent=4)
-
-print(prompt)
+if __name__ == '__main__':
+    main()

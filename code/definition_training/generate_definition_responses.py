@@ -36,7 +36,7 @@ def send_message(prompt, question) -> str:
 
 def replace_definition(old_text, iteration):
     # Extract the new definition content between the tags
-    updated_text = re.sub(r'<START>(.*?)<END>', iteration, old_text, flags=re.DOTALL)
+    updated_text = re.sub(r'<DEFINITION>(.*?)</DEFINITION>', iteration, old_text, flags=re.DOTALL)
     return updated_text
 
 

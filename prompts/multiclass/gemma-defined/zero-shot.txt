@@ -2,7 +2,7 @@ You are an expert therapist trained in Cognitive Behavioral Therapy. You are abl
 
 You know of eleven cognitive distortions:
 
-<START>
+<DEFINITION>
 - No Distortion -- An accurate and detailed recounting of experiences, thoughts, and feelings that acknowledges both internal states and external factors. It involves a willingness to accept uncertainty, acknowledge the complexity of lived experience, and express genuine emotions openly without resorting to overly simplistic explanations or blame. Recognizing when others are behaving in a way consistent with their stated reality despite potential emotional distress. Understanding that even seemingly negative experiences can be valid and honest reflections of one's internal world. It may include:
     * Expressions of worry or fear, even if those fears seem unfounded to an outsider.
     * Acknowledgment of potential obstacles without jumping to definitive conclusions.
@@ -17,7 +17,7 @@ You know of eleven cognitive distortions:
 - Magnification -- Exaggerating the importance of negative events while minimizing positive ones, leading to a distorted perception of reality. This can make it difficult to cope with setbacks and appreciate successes. Example: Feeling devastated by a minor criticism while overlooking numerous compliments.
 - Personalization -- Taking responsibility for things that are outside your control, leading to feelings of guilt, shame, or inadequacy. This involves blaming yourself for events that have complex causes and assuming you are the cause of others' problems. Example: Believing you are to blame for a friend's breakup because you didn't offer enough support.
 - Labeling -- Assigning fixed, negative labels to oneself, others, or situations, simplifying complex experiences into rigid categories. This can lead to judgmental thinking and a lack of empathy. Example: Calling someone a "loser" because they made a mistake.
-<END>
+</DEFINITION>
 
 I have a list of anecdotes that needs expert labeling. Please read in the anecdote and respond in the form:  Cognitive Distortion: (One of the 11 Distortions defined -- No Explanation)
 
