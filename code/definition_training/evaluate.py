@@ -14,7 +14,7 @@ def evaluate(prompt: str, dataset: pd.DataFrame) -> float:
     """
     dataset['Response'] = dataset['Patient Question']\
         .apply(
-            lambda x: send_message_single_turn(prompt + x), axis=1
+            lambda x: send_message_single_turn(prompt + x)
         )
     return get_f1_macro(dataset)
 

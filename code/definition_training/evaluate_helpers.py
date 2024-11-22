@@ -75,7 +75,7 @@ def get_f1_macro(inference_df: pd.DataFrame) -> float:
     .apply(lambda x: x.lower())\
     .apply(catch_responses)
 
-    gold_secondary_data = inference_df('datasets/test.csv')['Secondary Distortion (Optional)']\
+    gold_secondary_data = inference_df['Secondary Distortion (Optional)']\
     .apply(lambda x: x if x is None else str(x).lower())\
     .apply(catch_responses)
 

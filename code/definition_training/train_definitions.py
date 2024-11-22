@@ -41,7 +41,7 @@ def train_epoch(train_prompt: str, val_prompt: str, train_dataset: pd.DataFrame,
     batches = split_into_batches(train_dataset, num_batches)
     definitions = f'<DEFINITION>{extract_definition(train_prompt)}</DEFINITION>'
     best_definitions = definitions
-    best_f1 = 0
+    best_f1 = evaluate(val_prompt, val_dataset)
     val_list = []
 
     #Iterate through batches
@@ -103,6 +103,7 @@ def train_batch(batch: pd.DataFrame, initial_prompt: str) -> str:
             prompt = replace_definition(prompt, response[-1]['content'])
         except:
             pass
+    sys.stdout.write(f"\r\n")
 
     return extract_definition(prompt)
 
@@ -117,9 +118,9 @@ if __name__ == "__main__":
         val_prompt=val_prompt,
         train_dataset=train_dataset,
         val_dataset=val_dataset,
-        num_batches=5,
-        val_frequency=2,
-        epochs=3
+        num_batches=10,
+        val_frequency=20,
+        epochs=2
     ) 
     with open('definition_list.json', 'w') as f:
         json.dump(definition_list, f, indent=4)

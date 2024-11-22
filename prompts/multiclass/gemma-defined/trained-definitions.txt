@@ -1,0 +1,16 @@
+<DEFINITION><DEFINITION>
+- No Distortion -- A realistic and balanced recollection of events, thoughts, or experiences characterized by specific details, factual presentation, and a lack of self-blame or catastrophizing. The individual objectively presents the situation, recognizing its complexity and avoiding oversimplification. This can include descriptions of oneself, others, or fictional entities without applying judgmental labels or drawing sweeping conclusions. It may also involve recounting external factors influencing a situation without necessarily revealing internal thought processes. Look for concrete details like timelines, locations, and specific actions.
+- Emotional Reasoning -- Mistaking feelings for facts and allowing emotions to dictate interpretations of reality, *even when those feelings contradict objective evidence or logical reasoning*. This involves disregarding logic and reason in favor of emotional responses. *Example: Believing you are a failure because you feel sad, even though there is no objective evidence to support this conclusion, OR feeling intense anxiety about a presentation and assuming it will go terribly without considering your preparation.*
+- Overgeneralization -- Sweeping conclusions based on a single incident or a limited set of experiences. These conclusions are often applied broadly, ignoring exceptions or individual circumstances. For example, stating "Everyone I care about leaves me" after experiencing a few losses is an overgeneralization.
+- Mental Filter -- Focusing only on negative details while ignoring positive ones.
+
+- Should Statements --  Using rigid "should" or "must" statements to impose unrealistic expectations on oneself or others. These statements often reflect internalized rules or beliefs about how things "ought" to be, leading to guilt, shame, or frustration when these expectations are not met. *Example: Believing you "should" always be happy, even in difficult situations.*
+- All-or-Nothing Thinking -- Viewing situations and experiences in extremes, with no middle ground. Things are seen as either entirely good or bad, right or wrong, success or failure. This type of thinking lacks nuance and flexibility, often leading to overly simplistic judgments about oneself, others, and situations. *Example: Believing that if you don't get a perfect score on a test, you are a complete failure.*
+- Fortune-telling -- Predicting negative outcomes without sufficient evidence. This involves assuming the worst will happen and dwelling on potential catastrophes, leading to anxiety and fear. *Example: Convincing yourself that you will be rejected for a job before even applying.*
+- Magnification -- Exaggerating the importance of negative events or personal flaws while minimizing positive aspects.
+
+- Labeling -- Assigning negative labels to oneself or others based on limited information or isolated incidents. 
+
+
+
+</DEFINITION></DEFINITION>
