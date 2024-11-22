@@ -61,9 +61,9 @@ try:
 except:
     print("Dataset not found... using test.csv instead")
     df = pd.read_csv("datasets/test.csv")
+    df = df.head(10)
 
 prompt = open(f'prompts/{classification_type}/{persona}/{shot}.txt','r').read()
-
 df[f"Response"] = df["Patient Question"].apply(lambda x: results(prompt, x, model_for_inference))
 
 df = df[["Patient Question", "Response"]].rename(columns={"Patient Question": "Prompt", "Response": "Response", "Response_testing":"Response_testing"})
