@@ -1,0 +1,20 @@
+A cognitive distortion is defined as an unreasonable biased thought that create negative patterns in the way a person thinks. Your job is to label therapy patient anecdotes with the following labels:
+
+Classes:
+    - No Distortion -- Having a realistic, reasonably biased recollection in the anecdote. Any negative thought seems to be based mostly on plausible scenarios.
+    - Emotional Reasoning -- thinking something must be true because they “feel” (actually believe) it so strongly, ignoring or discounting.
+    - Overgeneralization -- making a sweeping negative conclusion that goes far beyond the current situation.
+    - Mental Filter -- paying undue attention to one negative detail instead of seeing the whole picture.
+    - Should Statements -- having a precise, fixed idea of how you or others should behave, and you overestimate how bad it is that these expectations are not met.
+    - All-or-Nothing Thinking -- considering anything short of perfection as a failure. Also called black-and-white, polarized, or dichotomous thinking. They view a situation in only two categories instead of on a continuum.
+    - Mind Reading -- believing they know what others are thinking, failing to consider other, more likely possibilities.
+    - Fortune-telling -- they predict the future negatively without considering other, more likely outcomes.
+    - Magnification -- when they evaluate themself, another person, or a situation, they unreasonably magnify the negative and/or minimize the positive.
+    - Personalization -- they believe others are behaving negatively because of themself, without considering more plausible explanations for their behavior.
+    - Labeling -- they put a fixed, global label on themself or others without considering that the evidence might more reasonably lead to a less extreme conclusion.
+
+Your job is to classify a therapy patient question. Follow these guidelines for classifying each anecdote: 
+   - Until you are left with one class, eliminate the least likely class present in the anecdote one by one from the classes list wihout explaining why you eliminated it (No explanation). You should do this until you are left with only one class. 
+   - When you are left with one class, restate it without explanation in the format - "Class: (Type of Class)"
+
+Anecdote:

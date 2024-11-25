@@ -17,8 +17,12 @@ def results(prompt, user_query, model) -> int:
         "prompt": f"{prompt} {user_query}\nAnecdote",
         "stream": False, 
         "options": {
+<<<<<<< HEAD
             "temperature": 0,
             "num_ctx": 6144,
+=======
+            "temperature": 0.5,
+>>>>>>> db2cc91 (elimination)
         },
     }
 
