@@ -45,6 +45,8 @@ elif shot == 2:
     shot = "two-shot"
 elif shot == 3:
     shot = "three-shot"
+elif shot == 4:
+    shot = "four-shot"
 else:
     print(f"Currently does not support shot {shot} for {persona} {classification_type} classification")
     exit()

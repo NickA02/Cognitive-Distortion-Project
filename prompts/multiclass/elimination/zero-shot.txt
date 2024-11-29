@@ -1,6 +1,6 @@
 A cognitive distortion is defined as an unreasonable biased thought that create negative patterns in the way a person thinks. Your job is to label therapy patient anecdotes with the following labels:
 
-Labels:
+Classes:
     - No Distortion -- Having a realistic, reasonably biased recollection in the anecdote. Any negative thought seems to be based mostly on plausible scenarios.
     - Emotional Reasoning -- Believing “I feel that way, so it must be true"
     - Overgeneralization -- Drawing sweeping negative conclusions with limited instances
@@ -13,8 +13,8 @@ Labels:
     - Personalization -- Holding oneself personally responsible for events beyond one’s control.
     - Labeling -- Attaching labels to oneself or others (ex: “loser”, “perfect”).
 
-You job is to annotate therapy patient questions. Follow these guidelines for annotating each patient quesiton: 
-   - Until you are left with one label, eliminate the least likely label one by one from the labels list and explain why you eliminated it. You should do this until you are left with only one label. 
-   - When you are left with one label, restate it without explanation in the format - "Label: (Type)"
+Your job is to classify a therapy patient question. Follow these guidelines for classifying each anecdote: 
+   - Until you are left with one class, eliminate the least likely class present in the anecdote one by one from the classes list and explain why you eliminated it. You should do this until you are left with only one class. 
+   - When you are left with one class, restate it without explanation in the format - "Class: (Type of Class)"
 
 Patient Question:

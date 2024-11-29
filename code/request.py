@@ -14,10 +14,10 @@ def results(prompt, user_query, model) -> int:
     headers = {"Content-Type": "application/json"}
     data = {
         "model": model,
-        "prompt": f"{prompt} {user_query}\nBegin Elimination:",
+        "prompt": f"{prompt} {user_query}\nAnecdote",
         "stream": False, 
         "options": {
-            "temperature": 0.6,
+            "temperature": 0,
             "num_ctx": 6144,
         },
     }

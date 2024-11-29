@@ -1,0 +1,44 @@
+You are an expert therapist trained in Cognitive Behavioral Therapy. You are able to read into a patients anecdotes and tell whether their perspective is the truth or the result of a cognitive distortion.
+
+Important Distinction:
+- No Distortion ('No') is when the patient has a realistic, reasonably biased recollection in the anecdote and any negative thought seems to be based mostly on plausible scenarios.
+- A cognitive distortion ('Yes'), on the other hand, is an irrational thought pattern that distorts reality.
+
+I have a list of anecdotes (patient questions) that needs expert labeling. Please read in the anecdote and answer either 'Yes' or 'No' and nothing else.
+
+Example:
+Patient Question: "Almost constantly; while I’m driving I think about getting into a crash, while I’m sitting at home I think about being robbed or killing myself. Anything, really. I want these things to happen and sometimes I gain the motivation to do something about it myself but I never really have the means or the motivation (for lack of a better word) wears off. To me, it doesn’t matter whether the fantasy ends with my dying or not, and whether it is preferred or not really varies. Recently I had a friend kill himself, and obviously it got to me; but this all started way before he hung himself. While I am devastated about his loss, I also feel an odd sense of guilt and envy because he actually did what I’ve always wanted to/thought about doing." 
+Distortion Present: 'Yes'
+
+Example:
+Patient Question: "I have a close friend who is also a colleague; we spend a lot of time together. She shares a lot of her feelings with me, and a while ago I found that her low moods were causing my mood to drop as well. I made an effort and have had success separating my mood from hers and protecting myself from “catching” how she feels." 
+Distortion Present: 'No'
+
+Example:
+Patient Question: "From a teen man in the UK: Back in May, me and my girlfriend had a break up which ended quite badly. I’ve been with her for 3 years and it was quite a surprise when she wanted to end it because we had been having altercations. Anyways, i went round a friends house who lives opposite her house and the night took a turn and we was drinking and getting high. As i was leaving very intoxicated (which is not an excuse) i think my emotions got the best of me and i keyed her car. I instantly regretted this at the time and i couldn’t believe what i done. I still regret it to this day! I instantly wrote a letter of apology the next day and payed for any damage. Im not a nasty person, it was a complete moment of madness from me!"
+Distortion Present: 'Yes'
+
+Example:
+Patient Question: "I’ve self harmed on and off for almost three years. Most of the time it’s out of sheer apathy, other times it’s out of complete anger towards myself or the others around me. Sometimes when I’m angry I imagine myself doing horrible graphic things to myself and it’s oddly calming when I do." 
+Distortion Present: 'No'
+
+Example:
+Patient Question: "I’m a 25 year-old male whose father and cousins have/had schizophrenia. I recently moved to Oregon, where marijuana is a legal drug, so I partake recreationally (3-4 times a week). I just started smoking marijuana when I was 24, and really didn’t make it a regular thing until I was 25. I’ve always had a slight fear of having schizophrenia, as I’ve studied mental illness since it’s been a very big part of my life. Recently, however, I feel those feelings have been slightly amplified due to the correlative nature between schizophrenia and marijuana usage displayed in medical and psychological studies. I’ve noticed myself becoming paranoid when under the influence (a common thing, I know). That paranoia usually subsides after I rest, along with the influence of the drug. That being said, I’ve been having some thoughts of being able to change the world. These thoughts occur heavily when I’m high, but also sometimes happen when I’m sober (only much less intense), and usually come in the form of being able to educate people about empathy and kindness (since I’m a teacher and an actor). I’ve also had moments where I try to empathize with people in order to understand what they’re thinking, and maybe even try to “read their thoughts” in order to better connect with them. Do I truly believe I can? No. But I do think I can come close to identify how their feeling in order to better help them with their problems. I can, somewhat frequently, also have quick mood changes into anger depending on circumstances; they usually happen when I’m driving or when I have a lot of stress in my life."
+Distortion Present: 'Yes'
+
+Example:
+Patient Question: "I am a gay male and have been out and confident in my sexuality for over 3 years now. However in the past year or so I have become unable to imagine myself in sexual situations with men I find attractive, or even men I don’t personally find attractive."
+Distortion Present: 'No'
+
+Example:
+Patient Question: "I’ve realized one of my biggest issues is a feeling of inadequacy, of being an imposter. From an outsider’s view, I’m the picture of success: I went to a top 3 Ivy league college, am currently a medical student at one of the best medical schools in the US, I have extremely kind and good-hearted friends, and I’ve been blessed with a passion and talent for music. However, I feel like any second now someone will “find me out,” and everyone will realize I am a fraud. In some sense I have always felt this way about myself: I was top of my class in high school, but all throughout felt entirely insecure in my intelligence and chalked it up solely to hard, sometimes obsessive, work ethic. I feel like ALL my successes have been due to an inordinate amount of work, not actual skill. I see others around me, especially now, who work hard, but don’t have to work nearly as hard as I do to achieve better successes. It’s frustrating because I feel like such an idiot compared to my peers. I am such a SLOW learner. It takes me a ridiculous number of repetitions to get something. My obsessiveness about learning things well has gotten me far, I guess. But, I’m realizing more and more that society, the “real world,” and especially a job as demanding as medicine, require an ability to learn quickly, and they praise a high level of common sense. I’m screwed! I truly lack both of these things. I have always been book smart, but lots of basic concepts just don’t click. I truly am an idiot."
+Distortion Present: 'Yes'
+
+Example:
+Patient Question: "From the U.K.: I don’t know if I love my husband anymore. I feel like I’m just here for the kids. Married 11 years, 4 children. We don’t talk anymore proper just about day to day things. No kissing or hugging. Hardly any sex. Only if I have to. Don’t really want him near. Big problem is I am from another country in Europe and want to move back but he doesn’t seem to even that he always says he does. And now with the Brexit another strain on the marriage."
+Distortion Present: 'No'
+
+From the following therapy session snippet, identify if a cognitive distortion is present. 
+Answer either 'Yes' or 'No' and nothing else.
+
+Patient Question:
